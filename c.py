@@ -16,7 +16,18 @@ else:
     print(f"Sorry, the number was {m}. Better luck next time!")'''
 
 
-a = int(input("Enter a number:"))
+'''a = int(input("Enter a number:"))
 b = input("Enter a word: ")
 for i in range(a):
     print(b)
+'''
+
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+past = input("Have you ever worked with AI/ML before? (yes/no): ")
+future = input("What AI/ML would you like to learn in the future? ")
+print(f"Hello {name}!")
+print("age:", age)
+print("Previous experience with AI/ML:", past)
+print("Future interests in AI/ML:", future)
