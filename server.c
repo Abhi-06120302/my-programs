@@ -1372,7 +1372,7 @@ int main()
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(){
     int a[50],n,i,temp;
     printf("Enter the number of elements in the array: ");
@@ -1395,6 +1395,37 @@ int main(){
         printf("%d ", a[i]);
     }
     printf("The second largest element in the array is: %d\n", a[n - 2]);
+    printf("\n");
+    return 0;
+}*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+int main() {    
+    struct Node* head;
+    struct Node* second;
+    struct Node* third;
+    head = (struct Node*)malloc(sizeof(struct Node));
+    second = (struct Node*)malloc(sizeof(struct Node));
+    third = (struct Node*)malloc(sizeof(struct Node));
+    head->data = 618;
+    head->next = second;
+    second->data = 911;
+    second->next = third;
+    third->data = 666;
+    third->next = head;
+    printf("Circular linked list elements:\n");
+    struct Node* current = head;
+    do {
+        printf("%d ", current->data);
+        current = current->next;
+    } while (current != head);
     printf("\n");
     return 0;
 }
