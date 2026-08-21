@@ -1432,7 +1432,7 @@ int main() {
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(){
     int a;
     int *p;
@@ -1443,5 +1443,36 @@ int main(){
     printf("The address of a is: %p\n", (void*)&a);
     printf("The value of p (address of a) is: %p\n", (void*)p);
     printf("The value pointed to by p is: %d\n", *p);
+    return 0;
+}*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+void linkedlisttraversal(struct Node* ptr) {
+    while (ptr != NULL) {
+        printf("Element: %d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+int main() {
+    struct Node* head;
+    struct Node* second;
+    struct Node* third;
+    head = (struct Node*)malloc(sizeof(struct Node));
+    second = (struct Node*)malloc(sizeof(struct Node));
+    third = (struct Node*)malloc(sizeof(struct Node));
+    head->data = 7;
+    head->next = second;
+    second->data = 11;
+    second->next = third;
+    third->data = 66;
+    third->next = NULL;
+    printf("Linked list elements:\n");
+    linkedlisttraversal(head);
     return 0;
 }
