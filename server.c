@@ -1400,7 +1400,7 @@ int main(){
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 struct Node {
     int data;
@@ -1419,13 +1419,29 @@ int main() {
     second->data = 911;
     second->next = third;
     third->data = 666;
-    third->next = head;
-    printf("Circular linked list elements:\n");
+    third->next = NULL;
+    printf("Singly linked list elements:\n");
     struct Node* current = head;
-    do {
+    while (current != NULL) {
         printf("%d ", current->data);
         current = current->next;
-    } while (current != head);
+
+    }
     printf("\n");
+    return 0;
+}*/
+
+
+#include <stdio.h>
+int main(){
+    int a;
+    int *p;
+    p = &a;
+    printf("Enter a number: ");
+    scanf("%d", &a);
+    printf("The value of a is: %d\n", a);
+    printf("The address of a is: %p\n", (void*)&a);
+    printf("The value of p (address of a) is: %p\n", (void*)p);
+    printf("The value pointed to by p is: %d\n", *p);
     return 0;
 }
