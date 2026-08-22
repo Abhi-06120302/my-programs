@@ -1428,9 +1428,15 @@ int main() {
 
     }
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = 999;
-    newNode->next = head;
-    head = second;
+    newNode->next = ptr;
+    ptr->data = 777;
+    ptr->next = temp;
+    temp->data = 888;
+    temp->next = head;
+    head = newNode;
     printf("\nElements in the linked list after insertion: ");
     current = head;
     while (current != NULL) {
