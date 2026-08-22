@@ -1420,12 +1420,22 @@ int main() {
     second->next = third;
     third->data = 666;
     third->next = NULL;
-    printf("Singly linked list elements:\n");
+    printf("Elements in the linked list before insertion: ");
     struct Node* current = head;
     while (current != NULL) {
         printf("%d ", current->data);
         current = current->next;
 
+    }
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = 999;
+    newNode->next = head;
+    head = newNode;
+    printf("\nElements in the linked list after insertion: ");
+    current = head;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
     }
     printf("\n");
     return 0;
@@ -1477,7 +1487,7 @@ int main() {
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 struct student {
     int rollno;
@@ -1513,4 +1523,4 @@ int main(){
     printf("Student 1: Roll No: %d, Name: %s, Marks: %.2f\n", s1.rollno, s1.name, s1.marks);
     printf("Student 2: Roll No: %d, Name: %s, Marks: %.2f\n", s2.rollno, s2.name, s2.marks);
     printf("Student 3: Roll No: %d, Name: %s, Marks: %.2f\n", s3.rollno, s3.name, s3.marks);  
-}
+}*/
