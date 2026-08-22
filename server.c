@@ -1400,7 +1400,7 @@ int main(){
 }*/
 
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 struct Node {
     int data;
@@ -1430,7 +1430,7 @@ int main() {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = 999;
     newNode->next = head;
-    head = newNode;
+    head = second;
     printf("\nElements in the linked list after insertion: ");
     current = head;
     while (current != NULL) {
@@ -1439,7 +1439,7 @@ int main() {
     }
     printf("\n");
     return 0;
-}*/
+}
 
 
 /*#include <stdio.h>
@@ -1524,3 +1524,4 @@ int main(){
     printf("Student 2: Roll No: %d, Name: %s, Marks: %.2f\n", s2.rollno, s2.name, s2.marks);
     printf("Student 3: Roll No: %d, Name: %s, Marks: %.2f\n", s3.rollno, s3.name, s3.marks);  
 }*/
+
