@@ -1447,7 +1447,7 @@ int main(){
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 struct Node {
     int data;
@@ -1475,4 +1475,42 @@ int main() {
     printf("Linked list elements:\n");
     linkedlisttraversal(head);
     return 0;
+}*/
+
+#include <stdio.h>
+#include <stdlib.h>
+struct student {
+    int rollno;
+    char name[50];
+    float marks;
+};
+int main(){
+    struct student s1;
+    struct student s2;
+    struct student s3;
+    printf("Enter details for student 1:\n");
+    printf("Roll number: ");
+    scanf("%d", &s1.rollno);
+    printf("Name: ");
+    scanf("%s", s1.name);
+    printf("Marks: ");
+    scanf("%f", &s1.marks);
+    printf("Enter details for student 2:\n");
+    printf("Roll number: ");
+    scanf("%d", &s2.rollno);
+    printf("Name: ");
+    scanf("%s", s2.name);
+    printf("Marks: ");
+    scanf("%f", &s2.marks);
+    printf("Enter details for student 3:\n");
+    printf("Roll number: ");
+    scanf("%d", &s3.rollno);
+    printf("Name: ");
+    scanf("%s", s3.name);
+    printf("Marks: ");
+    scanf("%f", &s3.marks);
+    printf("\nStudent Details:\n");
+    printf("Student 1: Roll No: %d, Name: %s, Marks: %.2f\n", s1.rollno, s1.name, s1.marks);
+    printf("Student 2: Roll No: %d, Name: %s, Marks: %.2f\n", s2.rollno, s2.name, s2.marks);
+    printf("Student 3: Roll No: %d, Name: %s, Marks: %.2f\n", s3.rollno, s3.name, s3.marks);  
 }
