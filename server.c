@@ -1400,7 +1400,7 @@ int main(){
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 struct Node {
     int data;
@@ -1445,7 +1445,7 @@ int main() {
     }
     printf("\n");
     return 0;
-}
+}*/
 
 
 /*#include <stdio.h>
@@ -1531,3 +1531,42 @@ int main(){
     printf("Student 3: Roll No: %d, Name: %s, Marks: %.2f\n", s3.rollno, s3.name, s3.marks);  
 }*/
 
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+    int data;
+    struct node* next;
+};
+
+int main()
+{
+    struct node* head = (struct node*)malloc(sizeof(struct node));
+    struct node* second = (struct node*)malloc(sizeof(struct node));
+    struct node* third = (struct node*)malloc(sizeof(struct node));
+    head->data = 1;
+    head->next = second;
+    second->data = 2;
+    second->next = third;
+    third->data = 3;
+    third->next = NULL;
+    struct node* current = head;
+    printf("Linked list elements before insertion:\n");
+    while (current != NULL)
+    {
+        printf("Element: %d\n", current->data);
+        current = current->next;
+    }
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+    newNode->data = 4;
+    newNode->next = third;
+    second->next = newNode;
+    current = head;
+    printf("Linked list elements after insertion:\n");
+    while (current != NULL)
+    {
+        printf("Element: %d\n", current->data);
+        current = current->next;
+    }
+    return 0;
+}
