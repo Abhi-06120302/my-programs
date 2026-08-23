@@ -1531,7 +1531,7 @@ int main(){
     printf("Student 3: Roll No: %d, Name: %s, Marks: %.2f\n", s3.rollno, s3.name, s3.marks);  
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 struct node
 {
@@ -1568,5 +1568,88 @@ int main()
         printf("Element: %d\n", current->data);
         current = current->next;
     }
+    return 0;
+}*/
+
+/*#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+void linkedlisttraversal(struct Node* ptr) {
+    while (ptr != NULL) {
+        printf("Element: %d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+struct Node* insertatend(struct Node* head, int data) {
+    struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
+    ptr->next = NULL;
+    ptr->data = data;
+    if (head == NULL) {
+        return ptr;
+    }
+    struct Node* current = head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    current->next = ptr;
+    return head;
+}
+int main() {
+    struct Node* head;
+    struct Node* second;
+    struct Node* third;
+    head = (struct Node*)malloc(sizeof(struct Node));
+    second = (struct Node*)malloc(sizeof(struct Node));
+    third = (struct Node*)malloc(sizeof(struct Node));
+    head->data = 7;
+    head->next = second;
+    second->data = 11;
+    second->next = third;
+    third->data = 66;
+    third->next = NULL;
+    printf("Linked list before insertion\n");
+    linkedlisttraversal(head);
+    head = insertatend(head, 56);
+    printf("Linked list after insertion\n");
+    linkedlisttraversal(head);
+    return 0;
+}*/
+
+#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+void linkedlisttraversal(struct Node* ptr) {
+    while (ptr != NULL) {
+        printf("Element: %d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+int main() {
+    struct Node* head;
+    struct Node* second;
+    struct Node* third;
+    head = (struct Node*)malloc(sizeof(struct Node));
+    second = (struct Node*)malloc(sizeof(struct Node));
+    third = (struct Node*)malloc(sizeof(struct Node));
+    head->data = 7;
+    head->next = second;
+    second->data = 11;
+    second->next = third;
+    third->data = 15;
+    third->next = NULL;
+    printf("Linked list elements:\n");
+    linkedlisttraversal(head);
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = 19;
+    newNode->next = NULL;
+    third->next = newNode;
+    printf("Linked list elements after insertion:\n");
+    linkedlisttraversal(head);
     return 0;
 }
