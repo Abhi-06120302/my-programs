@@ -1657,4 +1657,37 @@ int main() {
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
+int calc(int a, int b, char op) {
+    switch (op) {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/':
+            if (b != 0) {
+                return a / b;
+            } else {
+                printf("Error: Division by zero is not allowed.\n");
+                exit(1);
+            }
+        default:
+            printf("Invalid operator. Please use +, -, *, or /.\n");
+            exit(1);
+    }
+}
+
+int main() {
+    int a, b;
+    char op;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &op);
+    int result = calc(a, b, op);
+    printf("The result of %d %c %d is: %d\n", a, op, b, result);
+    return 0;
+}
