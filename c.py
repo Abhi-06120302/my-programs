@@ -32,8 +32,11 @@ print("age:", age)
 print("Previous experience with AI/ML:", past)
 print("Future interests in AI/ML:", future)'''
 
-
-a = 10
-b = 20
-a = b
-print(a)
+def simple_interest(principal, rate, time):
+    interest = (principal * rate * time) / 100
+    return interest
+principal = float(input("Enter the principal amount: "))
+rate = float(input("Enter the rate of interest: "))
+time = float(input("Enter the time in years: "))
+interest = simple_interest(principal, rate, time)
+print(f"The simple interest is: {interest}")
