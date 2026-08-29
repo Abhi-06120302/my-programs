@@ -1656,7 +1656,7 @@ int main() {
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 int calc(int a, int b, char op) {
@@ -1690,4 +1690,5 @@ int main() {
     int result = calc(a, b, op);
     printf("The result of %d %c %d is: %d\n", a, op, b, result);
     return 0;
-}
+}*/
+
