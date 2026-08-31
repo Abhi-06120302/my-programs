@@ -1692,7 +1692,7 @@ int main() {
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     int arr[50],n,temp;
@@ -1718,6 +1718,33 @@ int main()
     for (int i = 0; i < n; i++)
     {
         printf("%d\n",arr[i]);
+    }
+    return 0;
+}*/
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a[50],n,temp[50];
+
+    printf("Enter number of element in the array: ");
+    scanf("%d",&n);
+
+    printf("Enter element of array: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] % 2 == 0)
+        {
+            temp[i] = a[i];
+            printf("%d",temp[i]);
+        }
     }
     return 0;
 }
