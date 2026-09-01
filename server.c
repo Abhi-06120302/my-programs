@@ -1723,7 +1723,7 @@ int main()
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -1745,6 +1745,34 @@ int main()
             temp[i] = a[i];
             printf("%d",temp[i]);
         }
+    }
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter number: ");
+    scanf("%d",&n);
+    int q = 0;
+    for (int i = n; i > 0; i = i/10)
+    {
+        for (int j = n; j > 0; j = j/10)
+        {
+            int sq = j % 10;
+            q = q + (sq * sq);
+        }
+    }
+    printf("%d\n",q);
+    if (q == 1)
+    {
+        printf("The Number is Happy Number.");
+    }
+    else
+    {
+        printf("The number is not happy number.");
     }
     return 0;
 }

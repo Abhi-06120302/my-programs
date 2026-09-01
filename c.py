@@ -43,7 +43,7 @@ print(f"The simple interest is: {interest}")
 '''
 
 
-def calculator():
+'''def calculator():
     print("Welcome to the simple calculator!")
     print("Select operation:")
     print("1. Addition")
@@ -71,4 +71,11 @@ def calculator():
     else:
         print("Invalid input")
 
-calculator()
+calculator()'''
+
+
+n = int(input("Enter a number : "))
+s = 0
+c = n//10
+for i in range(n,0,-c):
+    print(i)
