@@ -72,10 +72,3 @@ print(f"The simple interest is: {interest}")
         print("Invalid input")
 
 calculator()'''
-
-
-n = int(input("Enter a number : "))
-s = 0
-c = n//10
-for i in range(n,0,-c):
-    print(i)

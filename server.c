@@ -1749,30 +1749,39 @@ int main()
     return 0;
 }*/
 
+/*#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+
+    if ((n % 2 == 0 && n % 3 == 0)||(n % 2 == 0 && n % 5 == 0)||(n % 3 == 0 && n % 5 == 0)||(n % 2 == 0 && n % 3 == 0 && n % 5 == 0))
+    {
+        printf("The Number is Ugly Number.");
+    }
+    else
+    {
+        printf("The Number is not Ugly. ");
+    }
+    return 0;
+}*/
+
 #include <stdio.h>
 
 int main()
 {
     int n;
-    printf("Enter number: ");
+    printf("Enter a number: ");
     scanf("%d",&n);
-    int q = 0;
-    for (int i = n; i > 0; i = i/10)
+
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = n; j > 0; j = j/10)
+        if ((i % 2 == 0 && i % 3 == 0)||(i % 2 == 0 && i % 5 == 0)||(i % 3 == 0 && i % 5 == 0)||(i % 2 == 0 && i % 3 == 0 && i % 5 == 0)||(i % 2 == 0 && i % 2 == 0)||(i % 3 == 0 && i % 3 == 0)||(i % 5 == 0 && i % 5 == 0))
         {
-            int sq = j % 10;
-            q = q + (sq * sq);
+            printf("%d\n",i);
         }
-    }
-    printf("%d\n",q);
-    if (q == 1)
-    {
-        printf("The Number is Happy Number.");
-    }
-    else
-    {
-        printf("The number is not happy number.");
     }
     return 0;
 }
