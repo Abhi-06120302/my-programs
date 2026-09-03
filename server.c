@@ -1776,12 +1776,25 @@ int main()
     printf("Enter a number: ");
     scanf("%d",&n);
 
-    for (int i = 1; i <= n; i++)
+    if ((n % 2 == 0) && (n % 3 == 0) && (n % 5 == 0))
     {
-        if ((i % 2 == 0 && i % 3 == 0)||(i % 2 == 0 && i % 5 == 0)||(i % 3 == 0 && i % 5 == 0)||(i % 2 == 0 && i % 3 == 0 && i % 5 == 0)||(i % 2 == 0 && i % 2 == 0)||(i % 3 == 0 && i % 3 == 0)||(i % 5 == 0 && i % 5 == 0))
-        {
-            printf("%d\n",i);
-        }
+        printf("The Number is UGLY.");
+    }
+    else if (((n % 2 == 0) && (n % 3 == 0))||((n % 3 == 0) && (n % 5 == 0))||((n % 2 == 0) && (n % 5 == 0)))
+    {
+        printf("The Number is UGLY.");
+    }
+    else if ((n % 2 == 0)||(n % 3 == 0)||(n % 5 == 0))
+    {
+        printf("The Number is UGLY. ");
+    }
+    else if (((n % 2 == 0) && (n % 3 != 0) && (n % 5 != 0))||((n % 2 != 0) && (n % 3 == 0) && (n % 5 != 0))||((n % 2 != 0) && (n % 3 != 0) && (n % 5 == 0)))
+    {
+        printf("The Number is not UGLY.");
+    }
+    else 
+    {
+        printf("The Number is not UGLY.");
     }
     return 0;
 }
