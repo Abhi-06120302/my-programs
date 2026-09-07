@@ -1768,7 +1768,7 @@ int main()
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -1797,4 +1797,56 @@ int main()
         printf("The Number is not UGLY.");
     }
     return 0;
+}*/
+
+/*#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Give the Number to check: ");
+    scanf("%d",&num);
+    int a = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        if (num % i == 0)
+        {
+            a++;
+        }
+    }
+    if (a == 2)
+    {
+        printf("The Number is Prime.");
+    }
+    else
+    {
+        printf("The Number is not prime.");
+    }
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int main()
+{
+    int n; 
+    printf("Number upto check prime: ");
+    scanf("%d",&n);
+    int i;
+    while (n > 1)
+    {
+        int a = 1;
+        for (i = 2; i < n; i--)
+        {
+            if (n % i == 0)
+            {
+                a = 2;
+            }
+        }
+        if (a == 2)
+        {
+            printf("The Number.");
+        }
+        n--;
+    }
 }
