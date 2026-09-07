@@ -1825,7 +1825,7 @@ int main()
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -1849,4 +1849,61 @@ int main()
         }
         n--;
     }
+}
+*/
+
+/*#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number upto print: ");
+    scanf("%d",&n);
+    int prev = 0;
+    int current = 1;
+    for (int i = 0; i <= n; i++)
+    {
+        int sum = prev + current;
+        prev = current;
+        current = sum;
+        printf("%d\n",current);
+    }
+    return 0;
+}*/
+
+/*#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Number: ");
+    scanf("%d",&n);
+    int sum = 0;
+    for(int i = 1; i <= n; i++)
+    {
+        if (i % 2 != 0)
+        {
+            sum += i;
+        }
+    }
+    printf("The Sum of EVEN Number is %d",sum);
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("The Number :");
+    scanf("%d",&n);
+    int a = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            printf("%d\n",i);
+            a *= i;
+        }
+    }
+    printf("The Number of factors are %d",a);
+    return 0;
 }
