@@ -1888,7 +1888,7 @@ int main()
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -1905,5 +1905,34 @@ int main()
         }
     }
     printf("The Number of factors are %d",a);
+    return 0;
+}*/
+
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter number upto which check: ");
+    scanf("%d",&n);
+    int s = 0;
+    for (int i = 2; i <= n; i++)
+    {
+        int a = 0;
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % j == 0)
+            {
+                a++;
+            }
+        }
+        s++;
+        if (a == 2)
+        {
+            printf("%d\n",i);
+        }
+    }
+    printf("%d",s);
     return 0;
 }
