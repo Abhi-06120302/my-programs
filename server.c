@@ -1909,7 +1909,7 @@ int main()
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -1927,12 +1927,79 @@ int main()
                 a++;
             }
         }
-        s++;
         if (a == 2)
         {
             printf("%d\n",i);
+            s++;
         }
     }
-    printf("%d",s);
+    printf("The %d",s);
+    return 0;
+}*/
+
+/*#include <stdio.h>
+int main()
+{
+    int a = 7;
+    int b = 45;
+    int c = 18;
+    
+    if (a < b && a < c)
+    {
+        printf("Smallest is %d",a);
+    }
+    else if (b < a && b < c)
+    {
+        printf("Smallest is %d",b);
+    }
+    else
+    {
+        printf("Smallest is %d",c);
+    }
+    return 0;
+}*/
+
+/*#include <stdio.h>
+
+int main()
+{
+    int dividend;
+    int divisor;
+    int remainder;
+    int quotient;
+
+    printf("Dividend = ");
+    scanf("%d",&dividend);
+
+    printf("Divisor = ");
+    scanf("%d",&divisor);
+
+    quotient = dividend/divisor;
+
+    remainder = dividend - (divisor * quotient);
+
+    printf("Quotient = %d\n",quotient);
+    printf("Remainder = %d",remainder);
+}*/
+
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("number = ");
+    scanf("%d",&n);
+    int c;
+    int a = 0;
+
+    for (int i = n; i < 0; i = i / 10)
+    {
+        c = n % 10;
+        a++;
+    }
+    if (a)
+    {
+        printf("%d",a);
+    }
     return 0;
 }
