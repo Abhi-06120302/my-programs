@@ -1983,7 +1983,7 @@ int main()
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     int n;
@@ -2001,5 +2001,65 @@ int main()
     {
         printf("%d",a);
     }
+    return 0;
+}*/
+
+/*#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    int a = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        a++;
+    }
+    printf("%d",a);
+    return 0;
+}*/
+
+// count a digit and sum of digits using function
+
+
+#include <stdio.h>
+int count(int n)
+{
+    int a = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        a++;
+    }
+    return a;
+}
+int digit(int n)
+{
+    int a = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int d = i % 10;
+        a = a + d;
+    }
+    return a;
+}
+int reverse(int n)
+{
+    int reverse = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int d = i % 10;
+        reverse = reverse * 10 + d;
+    }
+    return reverse;
+}
+
+int main()
+{
+    int num;
+    printf("Enter a Integer: ");
+    scanf("%d",&num);
+    printf("COUNT = %d\n",count(num));
+    printf("SUM = %d\n",digit(num));
+    printf("REVERSE = %d",reverse(num));
     return 0;
 }
