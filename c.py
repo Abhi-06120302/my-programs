@@ -74,9 +74,7 @@ print(f"The simple interest is: {interest}")
 calculator()'''
 
 
-def num(a,b):
-    s = a + b
-    return s
-x = float(input("Enter a number: "))
-y = float(input("Enter a number: "))
-print(f"The sum of {x} and {y} is {num(x,y)}")
+n = 2
+c = 10
+x = n % c
+print(x)

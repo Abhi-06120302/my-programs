@@ -2022,7 +2022,7 @@ int main()
 // count a digit and sum of digits using function
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int count(int n)
 {
     int a = 0;
@@ -2052,6 +2052,17 @@ int reverse(int n)
     }
     return reverse;
 }
+int palindrome(int n)
+{
+    if (n == reverse(n))
+    {
+        printf("PALINDROME");
+    }
+    else
+    {
+        printf("NOT PALINDROME");
+    }
+}
 
 int main()
 {
@@ -2060,6 +2071,97 @@ int main()
     scanf("%d",&num);
     printf("COUNT = %d\n",count(num));
     printf("SUM = %d\n",digit(num));
-    printf("REVERSE = %d",reverse(num));
+    printf("REVERSE = %d\n",reverse(num));
+    palindrome(num);
+    return 0;
+}*/
+
+/*#include <stdio.h>
+
+void num(int n)
+{
+    if (n == 0)
+        return;
+    printf("%d",n);
+    num(n - 1);
+}
+int main()
+{
+    num(5);
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int first(int n)
+{
+    int first;
+    for (int i = n; i != 0; i = i/10)
+    {
+        first = i % 10;
+    }
+    return first;
+}
+
+int last(int n)
+{
+    int last = n % 10;
+    return last;
+}
+
+int large(int n)
+{
+    int temp;
+    int large = n % 10;
+    for (int i = n; i != 0; i = i/10)
+    {
+        temp = i % 10;
+        if (temp > large)
+        {
+            large = temp;
+        }
+    }
+    return large;
+}
+
+int small(int n)
+{
+    int temp;
+    int small = n % 10;
+    for (int i = n; i != 0; i = i/10)
+    {
+        temp = i % 10;
+        if (temp < small)
+        {
+            small = temp;
+        }
+    }
+    return small;
+}
+
+int even(int n)
+{
+    int count = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int temp = i % 10;
+        if (temp % 2 == 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main()
+{
+    int num;
+    printf("Number = ");
+    scanf("%d",&num);
+    printf("The first digit of %d is %d\n",num,first(num));
+    printf("The last digit of %d is %d\n",num,last(num));
+    printf("The largest digit of %d is %d\n",num,large(num));
+    printf("The Smallest digit of %d is %d\n",num,small(num));
+    printf("The no. of even digit in %d is %d",num,even(num));
     return 0;
 }
