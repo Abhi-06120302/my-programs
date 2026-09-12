@@ -2153,6 +2153,80 @@ int even(int n)
     return count;
 }
 
+int odd(int n)
+{
+    int count = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int temp = i % 10;
+        if (temp % 2 != 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+int zero(int n)
+{
+    int count = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int d = i % 10;
+        if (d == 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int evensum(int n)
+{
+    int sum = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int d = i % 10;
+        if (d % 2 == 0)
+        {
+            sum = sum + d;
+        }
+    }
+    return sum;
+}
+
+int oddsum(int n)
+{
+    int sum = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int d = i % 10;
+        if (d % 2 != 0)
+        {
+            sum = sum + d;
+        }
+    }
+    return sum;
+}
+
+int differenceevenodd(int n)
+{
+    return evensum(n) - oddsum(n);
+}
+
+int frequency(int n)
+{
+    int value = 0;
+    int frequency = 0;
+    for (int i = n; i != 0; i = i/10)
+    {
+        int d = i % 10;
+        if (d == value)
+        {
+            frequency++;
+        }
+    }
+    return frequency;
+}
 int main()
 {
     int num;
@@ -2162,6 +2236,12 @@ int main()
     printf("The last digit of %d is %d\n",num,last(num));
     printf("The largest digit of %d is %d\n",num,large(num));
     printf("The Smallest digit of %d is %d\n",num,small(num));
-    printf("The no. of even digit in %d is %d",num,even(num));
+    printf("The no. of even digit in %d is %d\n",num,even(num));
+    printf("The no. of odd digit in %d is %d\n",num,odd(num));
+    printf("The no. of zeros in %d is %d\n",num,zero(num));
+    printf("The sum of even digits in %d is %d\n",num,evensum(num));
+    printf("The Sum of odd digits in %d is %d\n",num,oddsum(num));
+    printf("The difference between sum of even digits and odd digits in %d is %d\n",num,differenceevenodd(num));
+    printf("The frequency of number in %d is %d",num,frequency(num));
     return 0;
 }
