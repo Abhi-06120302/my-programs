@@ -2215,7 +2215,9 @@ int differenceevenodd(int n)
 
 int frequency(int n)
 {
-    int value = 0;
+    int value;
+    printf("Search = ");
+    scanf("%d",&value);
     int frequency = 0;
     for (int i = n; i != 0; i = i/10)
     {
@@ -2227,6 +2229,22 @@ int frequency(int n)
     }
     return frequency;
 }
+
+int secondlarge(int n)
+{
+    int temp;
+    int sec = n % 10;
+    for (int i = n; i != 0; i = i/10)
+    {
+        temp = i % 10;
+        if (sec < temp && sec > temp)
+        {
+            sec = temp;
+        }
+    }
+    return temp;
+}
+
 int main()
 {
     int num;
@@ -2242,6 +2260,7 @@ int main()
     printf("The sum of even digits in %d is %d\n",num,evensum(num));
     printf("The Sum of odd digits in %d is %d\n",num,oddsum(num));
     printf("The difference between sum of even digits and odd digits in %d is %d\n",num,differenceevenodd(num));
-    printf("The frequency of number in %d is %d",num,frequency(num));
+    printf("The frequency of number in %d is %d\n",num,frequency(num));
+    printf("The second largest digit of %d is %d\n",num,secondlarge(num));
     return 0;
 }
