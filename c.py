@@ -74,7 +74,11 @@ print(f"The simple interest is: {interest}")
 calculator()'''
 
 
-n = 2
-c = 10
-x = n % c
-print(x)
+n = int(input("Enter a number : "))
+a = 0
+while n != 0:
+    d = n % 10
+    a += 1
+    n = n/10
+first = n % (10**(a - 1))
+print(first)

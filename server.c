@@ -2233,16 +2233,37 @@ int frequency(int n)
 int secondlarge(int n)
 {
     int temp;
+    int lar;
     int sec = n % 10;
     for (int i = n; i != 0; i = i/10)
     {
         temp = i % 10;
-        if (sec < temp && sec > temp)
+        if (sec < temp)
         {
+            lar = sec;
             sec = temp;
         }
+        else if (temp > lar && temp < sec)
+        {
+            lar = temp;
+        }
     }
-    return temp;
+    return lar;
+}
+
+int removelastdig(int n)
+{
+    return n /10;
+}
+
+int removefirst(int n)
+{
+    int d = 1;
+    for(int i = n; i > 10; i = i/10)
+    {
+        d *= 10;
+    }
+    return n % d;
 }
 
 int main()
@@ -2262,5 +2283,7 @@ int main()
     printf("The difference between sum of even digits and odd digits in %d is %d\n",num,differenceevenodd(num));
     printf("The frequency of number in %d is %d\n",num,frequency(num));
     printf("The second largest digit of %d is %d\n",num,secondlarge(num));
+    printf("The %d after removing of last digit is %d\n",num,removelastdig(num));
+    printf("The %d after removing of first digit is %d",num,removefirst(num));
     return 0;
 }
