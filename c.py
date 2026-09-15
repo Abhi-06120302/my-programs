@@ -74,11 +74,39 @@ print(f"The simple interest is: {interest}")
 calculator()'''
 
 
-n = int(input("Enter a number : "))
-a = 0
-while n != 0:
-    d = n % 10
-    a += 1
-    n = n/10
-first = n % (10**(a - 1))
-print(first)
+customer_type = input("Enter customer type (regular/premium)? ")
+amount = int(input("Enter a amount to pay: "))
+coupon = input("If customer have coupon enter (YES/yes) or if not have coupon then (NO/no)? ")
+
+if customer_type == "premium":
+    if amount >= 5000:
+        discount = amount*(3/10)
+        final_amount1 = amount - discount
+        print("The amount have to pay if you have after discount for premium customer is",final_amount1)
+
+    elif amount >= 3000:
+        discount = amount/5
+        final_amount2 = amount - discount
+        print("The amount have to pay if you have after discount for premium customer is",final_amount2)
+
+    else:
+        discount = amount/10
+        final_amount3 = amount - discount
+        print("The amount have to pay if you have after discount for premium customer is",final_amount3)
+
+elif customer_type == "regular":
+    if amount >= 5000 and coupon == "yes" or "YES":
+        discount = amount/5
+        final_amount4 = amount - discount
+        print("The amount have to pay if you have after discount for premium customer is",final_amount4)
+
+    elif amount >= 3000:
+        discount = amount/10
+        final_amount5 = amount - discount
+        print("The amount have to pay if you have after discount for premium customer is",final_amount5)
+
+    else:
+        print("The amount have to pay if you have after discount for premium customer is",amount)
+
+else:
+    print("##### INVALID CUSTOMER #####")

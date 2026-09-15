@@ -2266,6 +2266,22 @@ int removefirst(int n)
     return n % d;
 }
 
+int swap(int n)
+{
+    int last = 1;
+    int d = n/10;
+    int i;
+    int both;
+    int lastdig = n % 10;
+    for (i = n; i > 10; i = i/10)
+    {
+        last *= 10;
+    }
+    int firstdig = n/last;
+    both = d % (last/10);
+    return (lastdig*last) + both*10 + firstdig;
+}
+
 int main()
 {
     int num;
@@ -2284,6 +2300,7 @@ int main()
     printf("The frequency of number in %d is %d\n",num,frequency(num));
     printf("The second largest digit of %d is %d\n",num,secondlarge(num));
     printf("The %d after removing of last digit is %d\n",num,removelastdig(num));
-    printf("The %d after removing of first digit is %d",num,removefirst(num));
+    printf("The %d after removing of first digit is %d\n",num,removefirst(num));
+    printf("The %d after swapping first and last digits is %d\n",num,swap(num));
     return 0;
 }
