@@ -2091,7 +2091,7 @@ int main()
     return 0;
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int first(int n)
 {
@@ -2302,5 +2302,69 @@ int main()
     printf("The %d after removing of last digit is %d\n",num,removelastdig(num));
     printf("The %d after removing of first digit is %d\n",num,removefirst(num));
     printf("The %d after swapping first and last digits is %d\n",num,swap(num));
+    return 0;
+}*/
+
+/*#include <stdio.h>
+
+int armstrong(int n)
+{
+    int cube,digit,sum;
+
+    for (int i = 1; i <= n; i++)
+    {
+        sum = 0;
+        for (int j = i; j > 0; j = j/10)
+        {
+            digit = j % 10;
+            cube = digit*digit*digit;
+            sum += cube;
+        }
+        if (i == sum)
+        {
+            printf("%d\n",i);
+        }
+    }
+}
+
+int main()
+{
+    int num;
+    printf("Number = ");
+    scanf("%d",&num);
+
+    armstrong(num);
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int perfect(int n)
+{
+    int sum = 0;
+    for (int i = 1; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            sum += i;
+        }
+    }
+    return n == sum;
+}
+
+int main()
+{
+    int number;
+    printf("Enter a number: ");
+    scanf("%d",&number);
+
+    if (perfect(number))
+    {
+        printf("%d is the PERFECT.",number);
+    }
+    else
+    {
+        printf("%d is not PERFECT.",number);
+    }
     return 0;
 }
